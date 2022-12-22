@@ -1,0 +1,8 @@
+.git
+.nextflow*
+work
+datahub
+dag.dot*
+trace.txt*
+report.html*
+results/

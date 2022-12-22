@@ -1,0 +1,7 @@
+name: R
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - git-lfs=3.2.0
