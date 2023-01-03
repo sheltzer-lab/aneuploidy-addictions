@@ -26,6 +26,12 @@ $ conda --version
 conda 4.14.0
 ```
 
+It should be sufficient to run the following on a machine with both of the above programs. This will first download the workflow from GitHub (with associated reference data), then run the workflow building conda environments as needed.
+
+```console
+nextflow run sheltzer-lab/aneuploidy-addictions -with-conda
+```
+
 ## Workflow
 
 Rather than repeat what can be read in the Nextflow script itself, the description here is meant to provide a "plain language" non-computational overview of the workflow. I will intermix searchable code elements in `monospaced font` so that one may cross-reference the description here with the code directly.
