@@ -6,7 +6,6 @@ channels:
 dependencies:
   - bioconductor-complexheatmap=2.14.0
   - r-cowplot=1.1.1
-  - r-ggrepel=0.9.2
   - r-here=1.0.1
   - r-magick=2.7.3
   - r-reshape2=1.4.4
