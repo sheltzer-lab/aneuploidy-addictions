@@ -1,4 +1,4 @@
-name: R
+name: cleaning
 channels:
   - conda-forge
   - bioconda

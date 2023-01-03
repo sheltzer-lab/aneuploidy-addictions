@@ -1,4 +1,4 @@
-name: R
+name: figures
 channels:
   - conda-forge
   - bioconda

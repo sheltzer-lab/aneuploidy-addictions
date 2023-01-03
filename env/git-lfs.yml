@@ -1,4 +1,4 @@
-name: R
+name: lfs
 channels:
   - conda-forge
   - bioconda

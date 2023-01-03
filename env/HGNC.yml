@@ -1,4 +1,4 @@
-name: R
+name: hgnc
 channels:
   - conda-forge
   - bioconda

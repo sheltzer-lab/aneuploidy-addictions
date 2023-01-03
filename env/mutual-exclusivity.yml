@@ -1,4 +1,4 @@
-name: R
+name: mutex
 channels:
   - conda-forge
   - bioconda
