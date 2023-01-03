@@ -3,7 +3,6 @@
 library(ComplexHeatmap, quietly = TRUE)
 library(reshape2, quietly = TRUE)
 library(tidyverse, quietly = TRUE)
-library(ggrepel, quietly = TRUE)
 
 source(here::here("bin/functions.R"))
 source(here::here("bin/constants.R"))
