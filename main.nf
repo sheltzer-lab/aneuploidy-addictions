@@ -35,9 +35,6 @@ workflow {
                 | map { it -> it.join(",") }
   def armDefinition = Channel.fromPath(params.armDefinition, checkIfExists: true).first()
 
-  // Download HGNC
-  HGNC(armDefinition, geneSet)
-
   // Download study
   GIT_CLONE_DATAHUB()
   GIT_LFS_STUDY(GIT_CLONE_DATAHUB.out, study)
@@ -68,23 +65,6 @@ workflow {
     | join(CLEAN_SCORE.out.clean) \
     | join(CLEAN_PATIENT.out.clean)
   )
-}
-
-process HGNC {
-  conda "${projectDir}/env/HGNC.yml"
-  label 'process_medium'
-  
-  input:
-    path definition
-    val geneset
-
-  output:
-    path('hgnc.csv')
-
-  script:
-    """
-    hgnc.R ${definition} '${geneset}'
-    """
 }
 
 process GIT_CLONE_DATAHUB {

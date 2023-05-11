@@ -1,9 +1,0 @@
-name: hgnc
-channels:
-  - conda-forge
-  - bioconda
-  - defaults
-dependencies:
-  - bioconductor-biomart=2.50.0
-  - r-assertr=2.8
-  - r-tidyverse=1.3.2
