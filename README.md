@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/581325839.svg)](https://zenodo.org/badge/latestdoi/581325839)
+
 # Aneuploidy Addictions
 
 A script which conducts the computational analysis associated with the Sheltzer Lab's investigation into aneuploidy addictions.
