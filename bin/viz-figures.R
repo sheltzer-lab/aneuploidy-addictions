@@ -4,8 +4,14 @@ library(ComplexHeatmap, quietly = TRUE)
 library(reshape2, quietly = TRUE)
 library(tidyverse, quietly = TRUE)
 
-source(here::here("bin/functions.R"))
-source(here::here("bin/constants.R"))
+# Determine the path to local shared R definitions
+initial.options <- commandArgs(trailingOnly = FALSE)
+file.arg.name <- "--file="
+script.name <- sub(file.arg.name, "", initial.options[grep(file.arg.name, initial.options)])
+script.basename <- dirname(script.name)
+
+source(file.path(script.basename, "functions.R"))
+source(file.path(script.basename, "constants.R"))
 
 args <- commandArgs(trailingOnly = TRUE)
 

@@ -3,7 +3,13 @@
 library(assertr, quietly = TRUE)
 library(tidyverse, quietly = TRUE)
 
-source(here::here("bin/functions.R"))
+# Determine the path to local shared R definitions
+initial.options <- commandArgs(trailingOnly = FALSE)
+file.arg.name <- "--file="
+script.name <- sub(file.arg.name, "", initial.options[grep(file.arg.name, initial.options)])
+script.basename <- dirname(script.name)
+
+source(file.path(script.basename, "functions.R"))
 
 Sys.setenv("VROOM_CONNECTION_SIZE" = 131072 * 5)
 

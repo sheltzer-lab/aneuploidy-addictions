@@ -3,7 +3,13 @@ library(reshape2)
 library(tidyverse)
 library(openxlsx)
 
-source(here::here("bin/constants.R"))
+# Determine the path to local shared R definitions
+initial.options <- commandArgs(trailingOnly = FALSE)
+file.arg.name <- "--file="
+script.name <- sub(file.arg.name, "", initial.options[grep(file.arg.name, initial.options)])
+script.basename <- dirname(script.name)
+
+source(file.path(script.basename, "constants.R")) # Load `chroms`
 
 args <- commandArgs(trailingOnly = TRUE)
 
